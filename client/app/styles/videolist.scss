@@ -1,0 +1,91 @@
+/*
+ * Copyright (c)
+ * 2014 Tsuyoyo. All Rights Reserved.
+ */
+
+.videolist {
+
+  $highlight-category-bg-color: #F8DC85;
+  $category-bg-color: #FFC34C;
+  $user-bg-color: #DD84E0;
+  $border-color: #aaa;
+  $border-width: 1px;
+
+  margin: 10px;
+
+  line-height: 1.6;
+
+  padding: 0;
+
+  border: solid $border-width $border-color;
+
+  h3 {
+    margin: 0;
+    padding: 10px;
+    background-color: $highlight-category-bg-color;
+    font-size: 18px;
+  }
+
+}
+
+.videolist-grid {
+
+  li { float: left; }
+
+  li:after,
+  ul:after { content: "";
+             display: block;
+             clear: both; }
+
+  .videoitem {
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    .thumbnail { width: 192px;
+                 height: auto;
+                 margin: 5px; }
+
+    p { margin: 0; }
+
+    .like { float : left; }
+
+    .like,
+    .title { width: 30%; }
+
+    .title { overflow: hidden;
+             white-space: nowrap;
+             text-overflow: ellipsis; }
+
+    .info { padding-left: 10px;
+           padding-right: 10px; }
+
+    .category,
+    .user { display: none; }
+
+  }
+}
+
+.videolist-list {
+
+  ul, li { padding: 0; }
+
+  .videoitem {
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+
+    border-top: solid 1px #888;
+
+    img { width: 320px;
+          height: 180px;
+          margin-right: 20px;
+          float: left; }
+
+    div.info:after,
+    img:after { content: "";
+                display: block;
+                clear: both; }
+  }
+
+}

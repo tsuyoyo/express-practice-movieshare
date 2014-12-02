@@ -1,0 +1,132 @@
+<!--
+/**
+ * Copyright (c)
+ * 2014 Tsuyoyo. All Rights Reserved.
+ */
+-->
+<actionbar></actionbar>
+
+<div class="ratingmanage">
+
+  <h3 class="page-header">Rating management view</h3>
+
+  <!-- 追加フォーム (Title) -->
+  <h4 class="title-newquestion-form"
+      ng-click="isAdding=false;" ng-show="isAdding">
+    <p class="glyphicon glyphicon-minus"/>
+    New question form
+  </h4>
+  <h4 class="title-newquestion-form-open"
+      ng-click="isAdding=true;" ng-show="!isAdding">
+      <p class="glyphicon glyphicon-plus"/>
+      Tap here to open add form
+  </h4>
+
+  <!-- 追加フォーム -->
+  <div class="newquestion-form" ng-show="isAdding">
+
+    <!-- タグ -->
+    <p>Question tag</p>
+    <input type="text"
+           class="form-control"
+           placeholder="Input tag"
+           ng-model="addQuestionTag" />
+
+    <!-- type -->
+    <p>Question type</p>
+    <select class="form-control"
+            ng-model="addQuestionType"
+            ng-options="type for type in types" />
+
+    <!-- option form -->
+    <div class="option-form"
+         ng-show="addQuestionType==='select'||addQuestionType==='radioBtn'">
+      <p>Options</p>
+      <table>
+        <tr>
+          <td></td>
+          <td>ID for option</td>
+          <td>Japanese</td>
+          <td>English</td>
+        </tr>
+        <tr ng-repeat="row in optionEditorNum track by $index">
+          <td>{{$index}} :</td>
+          <td><input type="text" class="form-control"
+                     ng-model="addQuestionOptions[$index].tag"/></td>
+          <td><input type="text" class="form-control"
+                     ng-model="addQuestionOptions[$index].jp"/></td>
+          <td><input type="text" class="form-control"
+                     ng-model="addQuestionOptions[$index].en"/></td>
+          <td><p class="glyphicon glyphicon-remove"
+                 ng-click="removeOptionEditor($index)"></p></td>
+        </tr>
+      </table>
+
+      <button class="btn btn-default"
+              ng-click="addOptionEditorNum()">Add option</button>
+    </div>
+
+    <!-- Question (Japanese) -->
+    <p>Question in Japanese</p>
+    <textarea ng-model="addQuestion.jp" rows="3" cols="60"/>
+    <BR>
+
+    <!-- Question (English) -->
+    <p>Question in English</p>
+    <textarea ng-model="addQuestion.en" rows="3" cols="60"/>
+    <BR>
+
+    <button class="btn btn-default"
+            ng-click="submit()">Add Question</button>
+
+  </div>
+
+  <!-- List表示 -->
+  <!-- Memo : https://github.com/angular-ui/ui-sortable -->
+  <!-- For ui-sortable, added ui-sortable and jquery-ui -->
+  <div class="question-list">
+    <h4 class="title-registered-question">Registered questions</h4>
+    <ul ui-sortable="sortableOptions" ng-model="registeredQuestions">
+      <li class="question-list-item" ng-repeat="q in registeredQuestions">
+
+        <p class="question-body-field">Tag</p>
+        <p class="question-tag">{{q.tag}}</p>
+
+        <p class="question-body-field">Question Type</p>
+        <p class="question-type">{{q.type}}</p>
+
+        <p class="question-body-field">Question</p>
+        <table border="1" class="question-table">
+          <tr>
+            <td>Japanese</td>
+            <td>English</td>
+          </tr>
+          <tr>
+            <td>{{q.question.jp}}</td>
+            <td>{{q.question.en}}</td>
+          </tr>
+        </table>
+
+        <p class="question-body-field">Options</p>
+        <table border="1" class="options-table" ng-show="q.options">
+          <tr>
+            <td>Tag</td>
+            <td>JP</td>
+            <td>EN</td>
+          </tr>
+          <tr ng-repeat="opt in q.options">
+            <td>{{opt.tag}}</td>
+            <td>{{opt.jp}}</td>
+            <td>{{opt.en}}</td>
+          </tr>
+        </table>
+
+        <button ng-click="removeQuestion(q._id)"
+                class="delete-button btn btn-default">
+                Delete (index : {{q.index}})
+        </button>
+      </li>
+    </ul>
+  </div>
+
+</div>

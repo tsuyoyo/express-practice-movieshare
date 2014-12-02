@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+    <!-- Thumbnail -->
+
+    <ImageView
+        android:id="@+id/video_upload_thumbnail"
+        android:layout_width="320dp"
+        android:layout_height="180dp"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="thumbnail image"
+        android:src="@drawable/ic_launcher" />
+    
+    <!-- Title -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="title :" />
+        <EditText 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="input title"
+            android:id="@+id/video_upload_title_form" />        
+    </LinearLayout>
+    
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="投稿する動画はこちらで宜しいでしょうか。問題なければ、ぜひタイトルをつけていただき、uploadボタンを押してください。ボタンを押した後、簡単なアンケートにご協力ください。" />    
+    
+    <!-- Upload button -->
+    <Button
+        android:id="@+id/video_upload_btn_upload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:text="Upload" />
+        
+</LinearLayout>

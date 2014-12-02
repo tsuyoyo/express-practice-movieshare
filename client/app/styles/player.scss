@@ -1,0 +1,70 @@
+/*
+ * Copyright (c)
+ * 2014 Tsuyoyo. All Rights Reserved.
+ */
+
+$title-background-color : #cf0;
+$like-background-color : #FFFCDB;
+$actionbar-color: #FF8119;
+
+.player {
+
+  padding-left: 10px;
+
+  padding-right: 10px;
+
+  .row {
+    margin-top: 10px;
+  }
+
+  video.video {
+    margin-bottom: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .rating-by-uploader {
+    padding: 0px;
+    padding-top: 0px;
+    border-radius: 5px;
+    border: solid 3px $actionbar-color;
+    background-color: $like-background-color;
+  }
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .titlebar {
+    background-color: $title-background-color;
+
+    margin-top: 5px;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    .title h3 {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    .posted-info p {
+      margin: 0;
+      padding: 0;
+      text-align: right;
+    }
+  }
+
+  .like {
+
+    margin-top: 0px;
+    padding: 10px;
+
+    border-left: thick solid $title-background-color;
+
+    background-color: $like-background-color;
+
+  }
+
+}

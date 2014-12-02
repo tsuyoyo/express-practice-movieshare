@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Motto video uploder</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="alert_no_title_title">Title error</string>
+    <string name="alert_no_title_message">Please enter a title</string>
+
+    <string name="ok">OK</string>    
+    
+</resources>

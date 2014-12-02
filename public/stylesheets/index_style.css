@@ -1,0 +1,24 @@
+.jumbotron h1{
+   font-size : 4em;
+}
+
+#index-image {
+   position: relative;
+   height: 360px;
+}
+#index-image img {
+   position: absolute;
+   top: 0;
+   left:0;
+   width:  100%;
+   height: 100%;
+   z-index: 8;
+   opacity: 0.0;
+}
+#index-image img.active {
+   z-index: 10;
+   opacity: 1.0;
+}
+#index-image img.last-active {
+   z-index: 9;
+}

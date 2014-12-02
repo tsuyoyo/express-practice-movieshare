@@ -1,0 +1,58 @@
+<!--
+ * Copyright (c)
+ * 2014 Tsuyoyo. All Rights Reserved.
+-->
+<div class="signin">
+
+  <form class="form-signin"
+        method="post"
+        enctype="multipart/form-data"
+        role="form">
+
+    <h2 class="form-signin-heading">Sing up</h2>
+    <BR>
+
+    <p>Name</p>
+    <input type="text"
+           class="form-control"
+           placeholder="Your name"
+           ng-model="name" />
+
+    <p>Mail address</p>
+    <input type="text"
+           class="form-control"
+           placeholder="Your mail address"
+           ng-model="mail" />
+
+    <p>Team</p>
+    <input type="text"
+           class="form-control"
+           placeholder="Your team"
+           ng-model="team" />
+
+    <p>Registration key</p>
+    <input type="password"
+           class="form-control"
+           placeholder="Registration key"
+           ng-model="registerKey" />
+
+    <p>
+      Check to make admin account :
+      <input type="checkbox" ng-model="admin"/>
+    </p>
+    <input type="text"
+           class="form-control"
+           placeholder="Admin register key"
+           ng-model="adminRegisterKey"
+           ng-show="admin"/>
+
+    <button class="btn btn-default register-btn"
+            ng-click="postNewUser()">Register</button>
+
+    <p>{{errorMsg}}</p>
+
+  </form>
+
+</div>
+
+<footer></footer>

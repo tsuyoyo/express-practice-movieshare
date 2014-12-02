@@ -1,0 +1,149 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+    <!-- Thumbnail -->
+
+    <ImageView
+        android:id="@+id/video_upload_thumbnail"
+        android:layout_width="320dp"
+        android:layout_height="180dp"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="thumbnail image"
+        android:src="@drawable/ic_launcher" />
+    
+    <!-- Title -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="title :" />
+        <EditText 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="input title"
+            android:id="@+id/video_upload_title_form" />        
+    </LinearLayout>
+ 
+     
+    <!-- Category -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category :"
+            />
+        <LinearLayout
+	        android:layout_width="match_parent"
+    	    android:layout_height="wrap_content"
+	        android:orientation="horizontal">       
+
+	        <Spinner
+	            android:id="@+id/video_upload_category_list"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="70"
+	            android:gravity="bottom" />
+
+	        <Button
+	            android:id="@+id/video_upload_category_add_btn"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_vertical"
+	            android:layout_weight="30"
+	            android:text="Add" />
+
+	    </LinearLayout>	        
+    </LinearLayout>
+
+    <!-- Tag -->     
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tag :"
+            />
+	    <LinearLayout
+		    android:layout_width="match_parent"
+    	    android:layout_height="wrap_content"
+	       	android:orientation="horizontal">
+        	<Spinner 
+            	android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+    	        android:layout_weight="70"
+            	android:id="@+id/video_upload_tag_list" />
+
+        	<Button
+        	    android:id="@+id/video_upload_tag_add_btn"
+        	    android:layout_width="0dp"
+        	    android:layout_height="wrap_content"
+        	    android:layout_gravity="center_vertical"
+        	    android:layout_weight="30"
+        	    android:text="Add" />
+        	
+	    </LinearLayout>
+    </LinearLayout>
+
+<!-- 
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+          	  android:layout_weight="20"
+            android:text=""
+            />
+        <EditText 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="40"
+            android:inputType="text"
+            android:id="@+id/video_upload_tag_form" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="40"
+            android:text="Add tag"
+            android:id="@+id/video_upload_btn_add_tag"
+            />
+    </LinearLayout>
+ -->
+     
+    <!-- Upload button -->
+
+    <Button
+        android:id="@+id/video_upload_btn_upload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:text="Upload" />
+        
+</LinearLayout>

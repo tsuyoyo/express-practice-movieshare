@@ -1,0 +1,25 @@
+<!--
+ * Copyright (c)
+ * 2014 Tsuyoyo. All Rights Reserved.
+-->
+<!-- Memo :
+ In case to use '-' in ng-class, class name should be inside of ''.
+ Otherwise, angular will fail to parse the class name.
+-->
+<div class="videolist"
+     ng-class="{'videolist-grid': isHighlight,
+                'videolist-list': !isHighlight}">
+
+  <a ng-if="isHighlight" href="" ng-click="onTitleClicked()">
+    <h3>{{listTitle}}</h3>
+  </a>
+  <h3 ng-if="!isHighlight">{{listTitle}}</h3>
+
+  <ul>
+    <li ng-repeat="v in videoList">
+      <videoitem video="{{v}}"
+                 listtype="{{listType}}"></videoitem>
+    </li>
+  </ul>
+
+</div>

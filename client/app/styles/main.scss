@@ -1,0 +1,26 @@
+/*
+ * Copyright (c)
+ * 2014 Tsuyoyo. All Rights Reserved.
+ */
+
+$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
+
+@import 'sass-bootstrap/lib/bootstrap';
+
+/* Custom page footer */
+.footer {
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.toppage {
+
+  ul,
+  li {
+    padding: 0;
+  }
+
+}

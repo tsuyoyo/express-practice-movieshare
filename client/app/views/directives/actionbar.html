@@ -1,0 +1,60 @@
+<!--
+ * Copyright (c)
+ * 2014 Tsuyoyo. All Rights Reserved.
+-->
+
+<div class="row">
+  <div class="col-sm-12">
+    <div class="header">
+      <h1>MOVIE SHOWCASE</h1>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <div class="menu navbar navbar-default">
+      <div class="navbar-header">
+        <a href="#" class="navbar-brand">Hello, {{getUsername()}}</a>
+      </div>
+
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <!-- Go to Top page -->
+          <li>
+            <a href="#">Top</a>
+          </li>
+          <!-- Go to Tag page -->
+          <li ng-if="('admin' === cachedUser.type)">
+            <a href="#/tagview">Tags</a>
+          </li>
+          <!-- Go to Comment page -->
+          <li ng-if="('admin' === cachedUser.type)">
+            <a href="#/commentview">Comments</a>
+          </li>
+          <!-- Go to question manage -->
+          <li ng-if="('admin' === cachedUser.type)">
+            <a href="#/ratingmanage">Rating manage</a>
+          <!-- Sign up page -->
+          <li ng-if="(null == cachedUser);">
+            <a ng-href="#/signup">Signup</a>
+          </li>
+          <!-- Sign in page -->
+          <li ng-if="(null == cachedUser);">
+            <a ng-href="#/signin">Signin</a>
+          </li>
+          <!-- Sign out page -->
+          <li ng-if="(null != cachedUser);">
+            <a href="" ng-click="signout()">Signout</a>
+          </li>
+          <!-- Contact -->
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,28 @@
+<!--
+ * Copyright (c)
+ * 2014 Tsuyoyo. All Rights Reserved.
+-->
+<div class="videoitem">
+
+  <img class="thumbnail"
+       src="{{thumbnail}}" ng-click="onVideoClicked(v)" />
+
+  <div class="info">
+    <p class="title">{{title}}</p>
+
+    <p class="like"><i class="glyphicon glyphicon-thumbs-up"/> : {{likeNum}}</p>
+
+    <p class="comment"><i class="glyphicon glyphicon-comment"/> : {{commentNum}}</p>
+
+    <p class="postedDate"><i class="glyphicon glyphicon-time"/> : {{postedDate}}</p>
+
+    <p class="user" ng-if="isShowUserName()">Posted by
+      <a href="" ng-click="onUserClicked()">{{username}}</a>
+    </p>
+
+    <p class="category" ng-if="isShowCategory()">category :
+      <a href="" ng-click="onCategoryClicked()">{{category}}</a>
+    </p>
+  </div>
+
+</div>

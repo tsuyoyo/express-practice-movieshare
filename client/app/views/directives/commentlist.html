@@ -1,0 +1,47 @@
+<!--
+ * Copyright (c)
+ * 2014 Tsuyoyo. All Rights Reserved.
+-->
+<div ng-show="cachedUser && requireSubmitForm">
+  <form class="commentform" ng-submit="submitComment()">
+    <input class="form-control"
+           type="text"
+           placeholder="input your comment and push submit"
+           ng-model="inputComment" />
+    <input class="submit-btn btn btn-default"
+           type="submit"
+           value="Comment"/>
+  </form>
+</div>
+
+<div class="commentnum">
+  <p>All comments ({{comments.length}})</p>
+</div>
+
+<div class="commentlist">
+  <ul>
+    <li ng-repeat="comment in comments">
+      <div class="comment-list-item">
+        <p>{{comment.comment}}</p>
+
+        <!-- Link to the video -->
+        <div ng-if="requireVideoLink">
+          <button class="btn btn-default"
+                  ng-click="onClickVideoLink(comment.videoid)">Open movie</button>
+        </div>
+
+        <div class="comment-info">
+          <!-- Posted by -->
+          <p class="comment-info-postedby">
+            <i class="glyphicon glyphicon-time"/>
+            {{comment.postedDateStr}}
+          </p>
+          <!-- Posted data -->
+          <p class="comment-info-posteddate">Posted by
+            <a href="" ng-click="onUserClicked(comment.userId)">{{comment.user}}</a>
+          </p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

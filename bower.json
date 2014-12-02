@@ -1,0 +1,14 @@
+{
+  "name": "140303_express_practice",
+  "version": "0.0.1",
+  "homepage": "https://github.com/tsuyoyo/140303_express_practice",
+  "authors": [
+    "tsuyogoro@gmail.com"
+  ],
+  "description": "Study for express",
+  "main": "app.js",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "~3.1.1"
+  }
+}

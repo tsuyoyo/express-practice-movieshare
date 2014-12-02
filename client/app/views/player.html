@@ -1,0 +1,60 @@
+<!--
+ * Copyright (c)
+ * 2014 Tsuyoyo. All Rights Reserved.
+-->
+<actionbar></actionbar>
+
+<div class="player">
+
+  <div class="row">
+
+    <div class="col-xs-10 col-sm-8">
+
+      <video class="video" ng-src="{{video}}" controls />
+
+      <div class="titlebar row">
+
+        <div class="title col-sm-8">
+          <h3>{{videoTitle}}</h3>
+        </div>
+
+        <div class="posted-info col-sm-4">
+          <p class="postedby">posted by
+            <a href="" ng-click="onUserSelected()">{{uploader}}</a>
+          </p>
+          <p class="posted-date">
+            <i class="glyphicon glyphicon-time"/>{{postedDate}}
+          </p>
+        </div>
+
+      </div>
+
+      <div class="like">
+
+        <p class="likenum">{{likesNum}} users like this video</p>
+
+        <button type="button"
+                class="btn btn-default"
+                ng-if="cachedUser"
+                ng-click="onLike()">
+          <span class="glyphicon glyphicon-thumbs-up"/>Like
+        </button>
+
+        <p ng-if="!cachedUser">Like button can be enabled by sign-in!!</p>
+      </div>
+
+      <commentlist videoid="{{videoId}}" submitform></commentlist>
+
+    </div>
+
+    <div class="col-xs-8 col-sm-4 sidebar-offcanvas">
+
+      <div class="rating-by-uploader">
+        <rating videoid="{{videoId}}"></rating>
+      </div>
+
+    </div>
+
+  </div>
+
+<footer></footer>

@@ -1,0 +1,26 @@
+<div class="rating" ng-if="rating">
+
+  <h3>Rating by uploader</h3>
+
+  <ol>
+    <li ng-repeat="item in rating">
+
+      <!--
+      TODO : とりあえず日本語で表示してるけど、
+      適当な言語で表示できるmethodをかませて表示させたい
+      -->
+      <p class="question">{{item.question.jp}}</p>
+
+      <ul ng-if="item.rating.selectedOptions">
+        <li ng-repeat="option in item.rating.selectedOptions"
+            class="answer">{{optionByTag(option, item.options)}}</li>
+      </ul>
+
+      <p ng-if="item.rating.rating"
+         class="answer">{{optionByTag(item.rating.rating, item.options)}}</p>
+
+    </li>
+
+  </ol>
+
+</div>

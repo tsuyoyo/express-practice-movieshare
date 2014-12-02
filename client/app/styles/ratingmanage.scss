@@ -1,0 +1,107 @@
+/*
+ * Copyright (c)
+ * 2014 Tsuyoyo. All Rights Reserved.
+ */
+
+$title-background-color : #cf0;
+$like-background-color : #FFFCDB;
+
+$title-background-color-sub : #f0fff0;
+
+.ratingmanage {
+
+  padding-left: 20px;
+
+  padding-right: 20px;
+
+  .page-header {
+
+    margin-top: 10px;
+
+    margin-bottom: 10px;
+
+  }
+
+  .title-newquestion-form, .title-newquestion-form-open {
+
+    padding: 5px;
+
+    background-color: $title-background-color;
+
+    p {
+      margin: 0px;
+    }
+
+  }
+
+  .title-registered-question {
+
+    padding: 5px;
+
+    background-color: $like-background-color;
+
+    p {
+      margin: 0px;
+    }
+
+  }
+
+  .newquestion-form {
+
+    margin-left: 15px;
+
+    .option-form {
+
+      margin-left: 15px;
+
+    }
+
+    p {
+
+      background-color: $title-background-color-sub;
+
+      margin-top: 10px;
+
+    }
+
+    button {
+
+      margin-top: 10px;
+
+      margin-bottom: 10px;
+
+    }
+
+  }
+
+  .question-list {
+
+    .question-list-item {
+
+      border:1px solid #000000;
+
+      padding-left: 10px;
+
+      padding-right: 10px;
+
+      .question-body-field {
+
+        margin-top: 10px;
+        margin-bottom: 5px;
+
+      }
+
+      .question-tag, .question-type, .question-table, .options-table {
+        margin-left: 10px;
+      }
+
+      .delete-button {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+    }
+
+  }
+
+}

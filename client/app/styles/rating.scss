@@ -1,0 +1,39 @@
+/*
+ * Copyright (c)
+ * 2014 Tsuyoyo. All Rights Reserved.
+ */
+
+$actionbar-color: #FF8119;
+
+.rating {
+
+  ol {
+    padding: 15px;
+    margin-left: 20px;
+  }
+
+  ul, li {
+    padding: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .question {
+    color : #000;
+  }
+
+  .answer {
+    color : #808080;
+  }
+
+  h3 {
+    margin : 0px;
+    padding: 5px;
+    background: $actionbar-color;
+    font-size: 20px;
+    line-height: 1;
+    color: #ffffff;
+    text-decoration:none;
+  }
+
+}
