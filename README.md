@@ -77,7 +77,7 @@ exports.uploadVideo = function(req, res) {
 
 # UnitTestメモ
 * Testフレームワークはmochaを使う
- - http://visionmedia.github.io/mocha/
+ - http://mochajs.org/
 
 * Assertionに使うライブラリを利用者が選べるのが特徴。
  - 今回はBDDスタイルで、shouldというライブラリを利用。
